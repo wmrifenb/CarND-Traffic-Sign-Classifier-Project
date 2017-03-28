@@ -140,10 +140,10 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-|Dangerous curve to the right     		|    Speed limit (60km/h)									| 
-| Roundabout mandatory     			|  				Speed limit (20km/h)					|
-|	Speed limit (60km/h)			| 						Speed limit (20km/h)		|
-| Stop      		| Yield				 				|
+|Dangerous curve to the right     		|    Ahead only									| 
+| Roundabout mandatory     			|  				 Priority Road   				|
+|	Speed limit (60km/h)			| 						Speed limit (30km/h)  			|
+| Stop      		| Keep right	 				|
 | Yield			| Yield	      							|
 
 
@@ -182,4 +182,26 @@ For the third image (Speed limit (60km/h))
 | .19     				|  					Speed limit (60km/h)					|
 | 8.97136983e-04				| End of speed limit (80km/h)								|
 |  8.44042224e-05      			| End of no passing by vehicles over 3.5 metric tons	 				|
-| 1.40787165e-06			    | Right-of-way at the next intersection     							|
+
+For the fourth image (Stop)
+
+| Probability         	|     Prediction	        					|
+|:--------------------:|:---------------------------:| 
+| 1.0         			| Keep right  									| 
+| 4.88677401e-08     				|  					Roundabout mandatory					|
+| 1.50628034e-11				| Go straight or right								|
+|  6.84880234e-12      			| Turn left ahead	 				|
+| 2.55905743e-17			    | Priority road     							|
+
+
+For the fifth image (Yield)
+
+| Probability         	|     Prediction	        					|
+|:--------------------:|:---------------------------:| 
+| 1.0         			| Yield								| 
+| 4.75943417e-12     				|  				Ahead Only					|
+| 2.47509928e-30				| No vehicles							|
+| 1.55588593e-34      			| Speed limit (120km/h)				|
+| 9.36819277e-37			    | Bicycles crossing    							|
+
+[13, 35, 15,  8, 29]
