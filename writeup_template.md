@@ -204,4 +204,3 @@ For the fifth image (Yield)
 | 1.55588593e-34      			| Speed limit (120km/h)				|
 | 9.36819277e-37			    | Bicycles crossing    							|
 
-[13, 35, 15,  8, 29]
