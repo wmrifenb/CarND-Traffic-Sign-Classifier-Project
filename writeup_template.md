@@ -153,15 +153,23 @@ The model was able to correctly guess 1 of the 5 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image (Dangerous curve to the right), the top five soft max probabilities were:
+
+| Probability         	|     Prediction	        					| [35, 33, 34, 26, 17]
+|:--------------------:|:---------------------------:| 
+| .99         			| Ahead only					| 
+| 4.18548239e-03     				| Turn right ahead 										|
+| 2.36564275e-11					| Turn left ahead										|
+| 1.14261655e-13     			| Traffic Signals			 				|
+| 3.09631895e-20				    |    No entry  							|
+
+
+For the second image (Roundabout mandatory) 
 
 | Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+|:--------------------:|:---------------------------:| 
+| .62         			| Priority Road   									| 
+| .35     				| No passing for vehicles over 3.5 metric tons 										|
+| .016					| Traffic signals										|
+| 1.54992413e-05      			| No passing		 				|
+| 7.57722205e-07				    | Ahead only     							|
