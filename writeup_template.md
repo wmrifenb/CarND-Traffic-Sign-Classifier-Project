@@ -15,12 +15,6 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-X_test_webimages[0]=cv2.imread('./websearch_signs/german_signs_5/dangerous_curve_to_the_right20.jpg')
-X_test_webimages[1]=cv2.imread('./websearch_signs/german_signs_5/roundabout_40.jpg')
-X_test_webimages[2]=cv2.imread('./websearch_signs/german_signs_5/speed_limit_60kmph_3.jpg')
-X_test_webimages[3]=cv2.imread('./websearch_signs/german_signs_5/stop_14.jpg')
-X_test_webimages[4]=cv2.imread('./websearch_signs/german_signs_5/yield_13.jpg')
-
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./examples/grayscale.jpg "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
