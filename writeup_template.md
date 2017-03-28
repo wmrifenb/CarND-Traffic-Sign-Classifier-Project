@@ -155,7 +155,7 @@ The code for making predictions on my final model is located in the 11th cell of
 
 For the first image (Dangerous curve to the right), the top five soft max probabilities were:
 
-| Probability         	|     Prediction	        					| [35, 33, 34, 26, 17]
+| Probability         	|     Prediction	        					|
 |:--------------------:|:---------------------------:| 
 | .99         			| Ahead only					| 
 | 4.18548239e-03     				| Turn right ahead 										|
@@ -173,3 +173,13 @@ For the second image (Roundabout mandatory)
 | .016					| Traffic signals										|
 | 1.54992413e-05      			| No passing		 				|
 | 7.57722205e-07				    | Ahead only     							|
+
+For the third image (Speed limit (60km/h))
+
+| Probability         	|     Prediction	        					|
+|:--------------------:|:---------------------------:| 
+| .80         			| Speed limit (30km/h)  									| 
+| .19     				|  					Speed limit (60km/h)					|
+| 8.97136983e-04				| End of speed limit (80km/h)								|
+|  8.44042224e-05      			| End of no passing by vehicles over 3.5 metric tons	 				|
+| 1.40787165e-06			    | Right-of-way at the next intersection     							|
