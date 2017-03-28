@@ -32,6 +32,8 @@ The goals / steps of this project are the following:
 
 Here is a link to my [project code](https://github.com/wmrifenb/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
+Here is a link to my [project html](https://github.com/wmrifenb/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.html)
+
 ### Data Set Summary & Exploration
 
 #### 1. Provide a basic summary of the data set and identify where in your code the summary was done. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
@@ -50,7 +52,7 @@ signs data set:
 
 The code for this step is contained in the third code cell of the IPython notebook.
 
-I basiscally pick a sign image at random and display with its csv file enumeration. Running the cell repeatedly allowed me to explore the images and their respective classifcations.
+I basically picked a sign image at random and displayed it with its csv file enumeration. Running the cell repeatedly allowed me to explore the images and their respective classifcations.
 
 ![alt text][image1]
 
