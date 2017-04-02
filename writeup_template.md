@@ -106,14 +106,14 @@ My final model consisted of the following layers:
 
 The code for training the model is located in the seventh cell of the ipython notebook. 
 
-To train the model, I used an the AdamOptimizer as in the LeNet lab. I kept the same 128 sample batch size but increased the epochs to 30. 10 epochs was sufficient enought to achieve 94% accuracy on the validation data. Inceasing to 30 was done to ensure the neural network would refine itself enough to satisfy the 93% accuracy criteria on the test data. 30 epochs brought the accuracy to 95.2% on the validation data.
+To train the model, I used an the AdamOptimizer as in the LeNet lab. I kept the same 128 sample batch size but increased the epochs to 30. 10 epochs was sufficient enought to achieve 94% accuracy on the validation data. Inceasing to 30 was done to ensure the neural network would refine itself enough to satisfy the 93% accuracy criteria on the test data. 30 epochs brought the accuracy to 95.3% on the validation data.
 
 #### 5. Describe the approach taken for finding a solution. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 The code for calculating the accuracy of the model is located in the eigth cell of the Ipython notebook.
 
 My final model results were:
-* validation set accuracy of 95.2% 
+* validation set accuracy of 95.3% 
 * test set accuracy of 93.1%
 
 I chose the LeNet archetecture because it handled optical character recognition well in the LeNet lab. Traffic sign identification is not much more than OCR with three color channels as opposed to just grayscale.
@@ -140,10 +140,10 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-|Dangerous curve to the right     		|    Ahead only									| 
-| Roundabout mandatory     			|  				 Priority Road   				|
-|	Speed limit (60km/h)			| 						Speed limit (30km/h)  			|
-| Stop      		| Keep right	 				|
+|Dangerous curve to the right     		|    Speed limit (30km/h)								| 
+| Roundabout mandatory      			|  				Roundabout mandatory  				|
+|	Speed limit (60km/h)			| 						Speed limit (50km/h)  			|
+| Stop      		| Stop	 				|
 | Yield			| Yield	      							|
 
 
@@ -155,52 +155,57 @@ The code for making predictions on my final model is located in the 11th cell of
 
 For the first image (Dangerous curve to the right), the top five soft max probabilities were:
 
-| Probability         	|     Prediction	        					|
-|:--------------------:|:---------------------------:| 
-| .99         			| Ahead only					| 
-| 4.18548239e-03     				| Turn right ahead 										|
-| 2.36564275e-11					| Turn left ahead										|
-| 1.14261655e-13     			| Traffic Signals			 				|
-| 3.09631895e-20				    |    No entry  							|
-
+| Probability|Prediction|
+|:--------------------:|:---------------------------:|
+| 0.999998 | Speed limit (30km/h) |
+| 1.98308e-06 | Speed limit (100km/h) |
+| 3.32381e-08 | Right-of-way at the next intersection |
+| 5.93201e-10 | Speed limit (120km/h) |
+| 9.44289e-11 | Speed limit (80km/h) |
 
 For the second image (Roundabout mandatory) 
 
-| Probability         	|     Prediction	        					| 
-|:--------------------:|:---------------------------:| 
-| .62         			| Priority Road   									| 
-| .35     				| No passing for vehicles over 3.5 metric tons 										|
-| .016					| Traffic signals										|
-| 1.54992413e-05      			| No passing		 				|
-| 7.57722205e-07				    | Ahead only     							|
+| Probability|Prediction|
+|:--------------------:|:---------------------------:|
+| 0.999955 | Roundabout mandatory |
+| 3.2755e-05 | No vehicles |
+| 1.15368e-05 | Speed limit (100km/h) |
+| 5.35198e-07 | Keep right |
+| 1.45116e-07 | Turn right ahead |
 
 For the third image (Speed limit (60km/h))
 
-| Probability         	|     Prediction	        					|
-|:--------------------:|:---------------------------:| 
-| .80         			| Speed limit (30km/h)  									| 
-| .19     				|  					Speed limit (60km/h)					|
-| 8.97136983e-04				| End of speed limit (80km/h)								|
-|  8.44042224e-05      			| End of no passing by vehicles over 3.5 metric tons	 				|
+| Probability|Prediction|
+|:--------------------:|:---------------------------:|
+| 1.0 | Speed limit (50km/h) |
+| 3.47253e-11 | Speed limit (30km/h) |
+| 7.77497e-14 | Wild animals crossing |
+| 3.83347e-18 | Yield |
+| 4.25921e-24 | Speed limit (80km/h) |
 
 For the fourth image (Stop)
 
-| Probability         	|     Prediction	        					|
-|:--------------------:|:---------------------------:| 
-| 1.0         			| Keep right  									| 
-| 4.88677401e-08     				|  					Roundabout mandatory					|
-| 1.50628034e-11				| Go straight or right								|
-|  6.84880234e-12      			| Turn left ahead	 				|
-| 2.55905743e-17			    | Priority road     							|
-
+| Probability|Prediction|
+|:--------------------:|:---------------------------:|
+| 1.0 | Stop |
+| 2.7326e-10 | Speed limit (30km/h) |
+| 7.01483e-11 | Speed limit (80km/h) |
+| 8.99677e-13 | No entry |
+| 1.60252e-13 | Speed limit (60km/h) |
 
 For the fifth image (Yield)
 
-| Probability         	|     Prediction	        					|
-|:--------------------:|:---------------------------:| 
-| 1.0         			| Yield								| 
-| 4.75943417e-12     				|  				Ahead Only					|
-| 2.47509928e-30				| No vehicles							|
-| 1.55588593e-34      			| Speed limit (120km/h)				|
-| 9.36819277e-37			    | Bicycles crossing    							|
+| Probability|Prediction|
+|:--------------------:|:---------------------------:|
+| 1.0 | Yield |
+| 0.0 | Speed limit (20km/h) |
+| 0.0 | Speed limit (30km/h) |
+| 0.0 | Speed limit (50km/h) |
+| 0.0 | Speed limit (60km/h) |
 
+The accuracy of the model on the new websearch images was 60% compared to 93% of the test data.
+Considering that the 'Dangerous curve to right' sign image was taken at an odd angle its not suprising that the model failed to correctly classify it. If I had done some more preprocessing to challenge the neural network more, it may have succeeded in classifying this image.
+
+The estimate for the third image was close. The model guessed the 50kmph sign when it was actually the 60kmph sign. Strangely though it 60kmph didnt make the top five guesses.
+
+The LeNet model was very confident in its guesses - including the wrong ones.
